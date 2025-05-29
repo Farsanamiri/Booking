@@ -1,0 +1,661 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fly better</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="A5BC75F3-06A2-483A-9F14-2E88E5DDFC90.png" type="image/x-icon">
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    <noscript>
+        <div style="background-color: #3e5f81; padding: 20px; text-align: center;">
+            <h2 style="color: white; margin: 0;">JavaScript is disabled - Please enable it</h2>
+        </div>
+    </noscript>
+    <div class="hero">
+        <h2>Fly better with us</h2>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg" style="display: flex;justify-content: center;">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <a class="navbar-brand" href="#">
+                    <img src="A5BC75F3-06A2-483A-9F14-2E88E5DDFC90.png" alt="Fly Better Logo">
+                </a>
+
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Book</a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="#">Flights</a></li>
+                            <li><a class="dropdown-item" href="#">Hotels</a></li>
+                            <li><a class="dropdown-item" href="#">Car Rentals</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">Check in Online</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Our destinations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Cancel ticket</a></li>
+                    <li class="nav-item"><a class="nav-link disabled" href="#">Contact Us</a></li>
+                </ul>
+
+                <div class="navbar-icons ms-auto">
+                    <a href="#" class="search-icon">
+                        <img src="https://img.icons8.com/ios/50/ffffff/search.png" alt="Search" width="20">
+                    </a>
+                    <a href="#" class="login-btn">
+                        <button class="btn btn-light btn-sm">Log in | Sign Up</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container1 mt-4 mb-5">
+        <!-- Navigation Tabs -->
+        <ul class="nav nav-tabs" id="bookingTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="book-tab" data-bs-toggle="tab" data-bs-target="#book" type="button"
+                    role="tab">Book a flight</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="stopover-tab" data-bs-toggle="tab" data-bs-target="#stopover" type="button"
+                    role="tab">Book Hotel</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="manage-tab" data-bs-toggle="tab" data-bs-target="#manage" type="button"
+                    role="tab">Book car</button>
+            </li>
+        </ul>
+
+        <!-- Tab Content -->
+        <div class="tab-content" id="bookingTabsContent">
+            <!-- Book a Flight Tab -->
+            <div class="tab-pane fade show active" id="book" role="tabpanel" aria-labelledby="book-tab">
+                <div class="booking-card">
+                    <div class="btn-group btn-group-toggle w-100 mb-4" data-toggle="buttons">
+                        <label class="btn btn-outline-primary flight-type-btn active" style="margin-right: 5px;">
+                            <input type="radio" name="flight-type" autocomplete="off" style="color: #212529a5;" checked>
+                            Return
+                        </label>
+                        <label class="btn btn-outline-primary flight-type-btn" style="margin-right: 5px;">
+                            <input type="radio" name="flight-type" autocomplete="off"> One way
+                        </label>
+                        <label class="btn btn-outline-primary flight-type-btn">
+                            <input type="radio" name="flight-type" autocomplete="off"> Multi-city
+                        </label>
+                    </div>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="from" class="form-label">From</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="bi bi-geo-alt"></i></span>
+                                <input type="text" class="form-control" id="from" placeholder="City or airport">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="to" class="form-label">To</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="bi bi-geo-alt-fill"></i></span>
+                                <input type="text" class="form-control" id="to" placeholder="City or airport">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="departure" class="form-label">Departure</label>
+                            <div class="date-input">
+                                <input type="date" class="form-control" id="departure" value="3 May 2025">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="return-date" class="form-label">Return</label>
+                            <div class="date-input">
+                                <input type="date" class="form-control" id="return-date">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="passengers" class="form-label">Passengers / Class</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="bi bi-people"></i></span>
+                                <input type="text" class="form-control" id="passengers" value="1 Passenger, Economy">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <button class="btn btn-search mt-4 w-100">
+                            <i class="bi bi-search"></i> Search flights
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Stopover / Packages Tab -->
+            <div class="tab-pane fade" id="stopover" role="tabpanel" aria-labelledby="stopover-tab">
+                <div class="booking-card">
+                    <div class="btn-group btn-group-toggle w-100 mb-4" data-toggle="buttons">
+                        <label style="background-color: #3e5f81;" class="btn flight-type-btn active">Hotels</label>
+                    </div>
+                    <div class="row g-3">
+                        <div class="col-md-12">
+                            <label for="from2" class="form-label">Hotels</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="bi bi-geo-alt"></i></span>
+                                <input type="text" class="form-control" id="passengers2"
+                                    placeholder="City or Hotel name">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="departure2" class="form-label">Check in</label>
+                            <div class="date-input">
+                                <input type="date" class="form-control" id="departure2" value="6 May 2025">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="return-date2" class="form-label">Check out</label>
+                            <div class="date-input">
+                                <input type="date" class="form-control" id="return-date2" value="12 May 2025">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="passengers2" class="form-label">Passenger / Room</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="bi bi-people"></i></span>
+                                <input type="text" class="form-control" id="passengers2" value="2 Passengers, 1 room">
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-search mt-4 w-100">
+                        <i class="bi bi-search"></i> Search flights
+                    </button>
+                </div>
+            </div>
+
+            <!-- Manage / Check in Tab -->
+            <div class="tab-pane fade" id="manage" role="tabpanel" aria-labelledby="stopover-tab">
+                <div class="booking-card">
+                    <div class="btn-group btn-group-toggle w-100 mb-4" data-toggle="buttons">
+                        <label style="background-color: #3e5f81;" class="btn flight-type-btn active">Car booking</label>
+                    </div>
+                    <div class="row g-3">
+                        <div class="col-md-12">
+                            <label for="from2" class="form-label">Car name</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="bi bi-geo-alt"></i></span>
+                                <input type="text" class="form-control" id="passengers2" placeholder="Car name">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="departure2" class="form-label">Check in</label>
+                            <div class="date-input">
+                                <input type="date" class="form-control" id="departure2" value="6 May 2025">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="return-date2" class="form-label">Check out</label>
+                            <div class="date-input">
+                                <input type="date" class="form-control" id="return-date2" value="12 May 2025">
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-search mt-4 w-100">
+                        <i class="bi bi-search"></i> Search flights
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <nav class="nav-container1">
+        <ul class="nav-menu1">
+            <li class="nav-item1">
+                <a href="#" class="nav-link1"><i class="fas fa-hotel"></i> Hotels</a>
+            </li>
+            <li class="nav-item1">
+                <a href="#" class="nav-link1"><i class="fas fa-car"></i> Car Rental</a>
+            </li>
+            <li class="nav-item1">
+                <a href="#" class="nav-link1"><i class="fas fa-suitcase"></i> Book a Holiday</a>
+            </li>
+            <li class="nav-item1">
+                <a href="#" class="nav-link1"><i class="fas fa-utensils"></i> Dining Experience</a>
+            </li>
+            <li class="nav-item1">
+                <a href="#" class="nav-link1"><i class="fas fa-car-side"></i> Chauffeur-Drive</a>
+            </li>
+            <li class="nav-item1">
+                <a href="#" class="nav-link1"><i class="fas fa-handshake"></i> Meet & Greet</a>
+            </li>
+
+
+        </ul>
+    </nav>
+
+
+
+    <div class="desctenations">
+        <!--best destinations-->
+        <div class="locationdiv">
+            <h3>Best destinations to visit</h3>
+        </div>
+
+        <div class="container my-5">
+            <!-- Row 1 -->
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1431274172761-fca41d930114?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+                            class="card-img-top" alt="Paris">
+                        <div class="card-body d-flex flex-column">
+                            <h4 class="card-text">Paris, France</h4>
+                            <p class="card-text">The romantic City of Light, home to the Eiffel Tower and world-class
+                                art museums.</p>
+                            <a href="#" class="btn btn-primary mt-auto" style="background-color: #3e5f81;">View
+                                Flight</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+                            class="card-img-top" alt="Tokyo">
+                        <div class="card-body d-flex flex-column">
+                            <h4 class="card-text">Tokyo, Japan</h4>
+                            <p class="card-text">A dazzling blend of cutting-edge technology and ancient traditions in
+                                the world's largest metropolis.</p>
+                            <a href="#" class="btn btn-primary mt-auto" style="background-color: #3e5f81;">View
+                                Flight</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+                            class="card-img-top" alt="New York">
+                        <div class="card-body d-flex flex-column">
+                            <h4 class="card-text">New York, USA</h4>
+                            <p class="card-text">The city that never sleeps, featuring iconic landmarks from Times
+                                Square to Central Park.</p>
+                            <a href="#" class="btn btn-primary mt-auto" style="background-color: #3e5f81;">View
+                                Flight</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+                            class="card-img-top" alt="London">
+                        <div class="card-body d-flex flex-column">
+                            <h4 class="card-text">London, UK</h4>
+                            <p class="card-text">Historic yet modern, with royal palaces, world-class museums, and
+                                vibrant multicultural neighborhoods.</p>
+                            <a href="#" class="btn btn-primary mt-auto" style="background-color: #3e5f81;">View
+                                Flight</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+                            class="card-img-top" alt="Dubai">
+                        <div class="card-body d-flex flex-column">
+                            <h4 class="card-text">Dubai, UAE</h4>
+                            <p class="card-text">A futuristic city of superlatives with towering skyscrapers and luxury
+                                shopping.</p>
+                            <a href="#" class="btn btn-primary mt-auto" style="background-color: #3e5f81;">View
+                                Flight</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1534233650908-b471f2350922?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+                            class="card-img-top" alt="Toronto">
+                        <div class="card-body d-flex flex-column">
+                            <h4 class="card-text">Toronto, Canada</h4>
+                            <p class="card-text">Canada's multicultural metropolis featuring the iconic CN Tower and
+                                beautiful waterfront.</p>
+                            <a href="#" class="btn btn-primary mt-auto" style="background-color: #3e5f81;">View
+                                Flight</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1527833633405-8dbf6a12b6d1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+                            class="card-img-top" alt="Istanbul">
+                        <div class="card-body d-flex flex-column">
+                            <h4 class="card-text">Istanbul, Turkey</h4>
+                            <p class="card-text">Where East meets West, spanning two continents with breathtaking
+                                mosques and bazaars.</p>
+                            <a href="#" class="btn btn-primary mt-auto" style="background-color: #3e5f81;">View
+                                Flight</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+                            class="card-img-top" alt="Male">
+                        <div class="card-body d-flex flex-column">
+                            <h4 class="card-text">Malé, Maldives</h4>
+                            <p class="card-text">Gateway to paradise with crystal-clear waters and overwater bungalows
+                                in the Indian Ocean.</p>
+                            <a href="#" class="btn btn-primary mt-auto" style="background-color: #3e5f81;">View
+                                Flight</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 3 -->
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1581617464810-9e50931d5b1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+                            class="card-img-top" alt="Kuala Lumpur">
+                        <div class="card-body d-flex flex-column">
+                            <h4 class="card-text">Kuala Lumpur, Malaysia</h4>
+                            <p class="card-text">A dynamic Asian hub with the iconic Petronas Towers and delicious
+                                street food.</p>
+                            <a href="#" class="btn btn-primary mt-auto" style="background-color: #3e5f81;">View
+                                Flight</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1581060341050-1720a152bbee?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+                            class="card-img-top" alt="Abu Dhabi">
+                        <div class="card-body d-flex flex-column">
+                            <h4 class="card-text">Abu Dhabi, UAE</h4>
+                            <p class="card-text">A luxurious desert city with stunning architecture and cultural
+                                landmarks.</p>
+                            <a href="#" class="btn btn-primary mt-auto" style="background-color: #3e5f81;">View
+                                Flight</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1525624855032-b87b6bb824f7?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+                            class="card-img-top" alt="Singapore">
+                        <div class="card-body d-flex flex-column">
+                            <h4 class="card-text">Singapore</h4>
+                            <p class="card-text">A futuristic city-state known for its cleanliness, gardens, and diverse
+                                cuisine.</p>
+                            <a href="#" class="btn btn-primary mt-auto" style="background-color: #3e5f81;">View
+                                Flight</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1517842267696-04ae583ac6c1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+                            class="card-img-top" alt="Doha">
+                        <div class="card-body d-flex flex-column">
+                            <h4 class="card-text">Doha, Qatar</h4>
+                            <p class="card-text">A rapidly modernizing city with stunning Islamic architecture and
+                                desert landscapes.</p>
+                            <a href="#" class="btn btn-primary mt-auto" style="background-color: #3e5f81;">View
+                                Flight</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Flight classes-->
+    <div class="flightclass">
+        <h2 style="display: flex;justify-content: center;align-items: center;">Enjoy you travel with us better</h2>
+        <div class="container2">
+
+            <br>
+            <!-- Dubai Experience Box -->
+            <div class="wide-box">
+                <div class="box-title">dubai experience</div>
+                <div class="box-subtitle">Create your Nyc Experience</div>
+                <div class="photonyc"></div>
+            </div>
+
+            <!-- Cabin Features Column -->
+            <div class="box-column">
+                <!-- Premium Economy Box -->
+                <div class="tall-box">
+                    <div class="box-title">cabin features</div>
+                    <div class="box-subtitle">Premium Economy</div>
+                    <a class="box-text">Load more</a>
+                    <div class="prephoto"></div>
+                </div>
+
+                <!-- Business Class Box -->
+                <div class="tall-box2">
+                    <div class="box-title">cabin features</div>
+                    <div class="box-subtitle">Business Class</div>
+                    <a class="box-text">Load more</a>
+                    <div class="bisphoto"></div>
+                </div>
+            </div>
+
+            <!-- Second Column of Cabin Features -->
+            <div class="box-column">
+                <!-- First Class Box -->
+                <div class="tall-box3">
+                    <div class="box-title">cabin features</div>
+                    <div class="box-subtitle">First Class</div>
+                    <a class="box-text">Load more</a>
+                    <div class="firphoto"></div>
+                </div>
+
+                <!-- Economy Class Box -->
+                <div class="tall-box4">
+                    <div class="box-title">cabin features</div>
+                    <div class="box-subtitle">Economy Class</div>
+                    <a class="box-text">Load more</a>
+                    <div class="ecophoto"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!--Kl destination-->
+
+    <div class="klcityflight">
+        <div class="container text-center text-white">
+            <h2>Explore Kuala Lumpur</h2>
+            <p class="lead">Discover the vibrant capital of Malaysia</p>
+            <button class="btn btn-primary mt-3" style="background-color: #3e5f81;">View Flights</button>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footercontainer">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="footer-links">
+                        <div class="footer-column" style="margin-left: 20px;">
+                            <h5>About us</h5>
+                            <ul>
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">Careers</a></li>
+                                <li><a href="#">Media Centre</a></li>
+                                <li><a href="#">Our planet</a></li>
+                                <li><a href="#">Our people</a></li>
+                                <li><a href="#">Our communities</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Divider after About us -->
+                        <div class="divider-vertical"></div>
+
+                        <div class="footer-column">
+                            <h5>Help and Contact</h5>
+                            <ul>
+                                <li><a href="#">Travel Updates</a></li>
+                                <li><a href="#">Special Assistance</a></li>
+                                <li><a href="#">Frequently asked questions</a></li>
+                            </ul>
+
+                            <!-- Divider between Help and Contact and Book -->
+                            <div class="divider"></div>
+
+                            <h5>Book</h5>
+                            <ul>
+                                <li><a href="#">Book flights</a></li>
+                                <li><a href="#">Travel services</a></li>
+                                <li><a href="#">Transportation</a></li>
+                                <li><a href="#">Planning your trip</a></li>
+                                <li><a href="#">Dubai Experience</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Divider after Book column -->
+                        <div class="divider-vertical"></div>
+
+                        <div class="footer-column">
+                            <h5>Manage</h5>
+                            <ul>
+                                <li><a href="#">Check-in</a></li>
+                                <li><a href="#">Manage your booking</a></li>
+                                <li><a href="#">Chauffeur drive</a></li>
+                                <li><a href="#">Right status</a></li>
+                            </ul>
+
+                            <!-- Divider between Manage and Before you fly -->
+                            <div class="divider"></div>
+
+                            <h5>Before you fly</h5>
+                            <ul>
+                                <li><a href="#">Baggage</a></li>
+                                <li><a href="#">Visa and passport information</a></li>
+                                <li><a href="#">Health</a></li>
+                                <li><a href="#">Travel information</a></li>
+                                <li><a href="#">Dubai International</a></li>
+                                <li><a href="#">To and from the airport</a></li>
+                                <li><a href="#">Rules and notices</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Divider after Before you fly column -->
+                        <div class="divider-vertical"></div>
+
+                        <div class="footer-column">
+                            <h5>Where we fly</h5>
+                            <ul>
+                                <li><a href="#">Route map</a></li>
+                                <li><a href="#">Asia and Pacific</a></li>
+                                <li><a href="#">Europe</a></li>
+                                <li><a href="#">The Americas</a></li>
+                                <li><a href="#">The Middle East</a></li>
+                                <li><a href="#">Flights to all countries/territories</a></li>
+                            </ul>
+
+                            <!-- Divider between Where we fly and Experience -->
+                            <div class="divider"></div>
+
+                            <h5>Experience</h5>
+                            <ul>
+                                <li><a href="#">Cabin features</a></li>
+                                <li><a href="#">Shop Emirates</a></li>
+                                <li><a href="#">What's on your flight</a></li>
+                                <li><a href="#">Inflight entertainment</a></li>
+                                <li><a href="#">Dining</a></li>
+                                <li><a href="#">Our lounges</a></li>
+                                <li><a href="#">Dubai Stopover</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Divider after Experience column -->
+                        <div class="divider-vertical"></div>
+
+                        <div class="footer-column">
+                            <h5>Loyalty</h5>
+                            <ul>
+                                <li><a href="#">Log in to Emirates Skywards</a></li>
+                                <li><a href="#">Join Emirates Skywards</a></li>
+                                <li><a href="#">Our partners</a></li>
+                                <li><a href="#">Business Rewards benefits</a></li>
+                                <li><a href="#">Register your company</a></li>
+                                <li><a href="#">Emirates Skywards Programme Rules</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="row">
+                        <div class="col-md-6" style="margin-right: 80px;">
+                            <div class="subscribe-section">
+                                <h5>Subscribe to our special offers</h5>
+                                <p>Save with our latest fares and offers.</p>
+                                <p><a href="#" style="color: #a5b1b8;">Unsubscribe or change your preferences</a></p>
+
+                                <div class="subscribe-input">
+                                    <input type="email" placeholder="Email address">
+                                    <button>Subscribe</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Add mt-4 class to this column for spacing -->
+                        <div class="col-md-6 mt-4 mt-md-0">
+                            <h5>Emirates App</h5>
+                            <p>Book and manage your flights on the go.</p>
+
+                            <div class="app-badges">
+                                <a href="#"><img
+                                        src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
+                                        alt="App Store"></a>
+                                <a href="#"><img
+                                        src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                                        alt="Google Play"></a>
+                            </div>
+
+                            <h5 style="margin-top: 20px;">Connect with us</h5>
+                            <p>Share your Emirates experience.</p>
+
+                            <div class="social-icons">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-youtube"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous">
+        </script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

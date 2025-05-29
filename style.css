@@ -1,0 +1,737 @@
+@font-face {
+    font-family: "main";
+    src: url(MIXONE.ttf);
+}
+
+:root {
+    --blue-dark: #212529;
+    --blue-dark2: #3e5f81;
+    --blue-accent: #2a2e78;
+    --text-light: #e0dcdc;
+    --text-dark: #e0e6ed;
+    --bg-light: #0f1c2e;
+}
+
+* {
+    font-family: main;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    overflow-x: hidden; /* Hide scrollbars */
+}
+
+.hero {
+    background-color: var(--blue-dark2);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-light);
+}
+
+.navbar {
+    background-color: var(--blue-dark) !important;
+}
+
+.navbar .nav-link,
+.navbar-brand {
+    color: var(--text-light) !important;
+}
+
+.navbar .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    color:#617996 !important;
+    border-radius: 5px;
+}
+
+.navbar-brand img {
+    max-width: 60px;
+    height: auto;
+    border-radius: 5px;
+}
+
+@media (max-width: 767px) {
+    .navbar-collapse {
+        text-align: center;
+    }
+
+    .navbar-brand {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .navbar-nav {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.navbar-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.navbar-icons a {
+    color: var(--text-light);
+}
+
+.navbar-icons a:hover {
+    color: var(--blue-accent);
+}
+
+.search-icon,
+.login-btn {
+    cursor: pointer;
+}
+
+
+.nav-tabs .nav-link {
+    color: #0d6efd;
+    background-color: transparent;
+    font-weight: 500;
+    border: none;
+    padding: 12px 20px;
+}
+
+.nav-tabs .nav-link.active {
+    color: #212529;
+    font-weight: 600;
+    border-bottom: 3px solid var(--primary-color);
+    background-color: white;
+}
+
+.nav-tabs .nav-link:hover {
+    border-color: transparent;
+}
+
+.form-label {
+    font-weight: 500;
+    color: #e0dcdc;
+    margin-bottom: 8px;
+}
+
+.btn-search {
+    background-color: #212529a5;
+    color: white;
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 6px;
+    border: none;
+    transition: all 0.3s;
+}
+
+.btn-search:hover {
+    background-color: var(--blue-accent);
+    transform: translateY(-2px);
+    color: white;
+}
+
+.flight-type-btn {
+    border-radius: 6px !important;
+    font-weight: 500;
+}
+
+.container1 {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(rgba(0, 0, 0, 0.564), rgba(0, 0, 0, 0.5)),
+        url('thehoneycombers.com_.jpg') center/cover no-repeat;
+    border-radius: 5px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin: 50px;
+}
+
+.tab-content {
+    min-height: 100px;
+    padding: 20px 0;
+    background-color: rgba(69, 66, 66, 0.678);
+    border: 1px solid #ced4da;
+    padding: 15px;
+    margin-top: 5px;
+    border-radius: 5px;
+
+}
+
+.date-input {
+    position: relative;
+}
+
+.date-input i {
+    position: absolute;
+    right: 10px;
+    top: 38px;
+    color: #6c757d;
+}
+
+.flight-type-btn {
+    border-radius: 6px !important;
+    font-weight: 500;
+    background-color: #3e5f81 !important;
+    color: white !important;
+    border-color: #3e5f81 !important;
+}
+
+.btn-outline-primary.active {
+    background-color: #3e5f81 !important;
+    border-color: #3e5f81 !important;
+    color: white !important;
+}
+
+.btn-outline-primary:hover {
+    background-color: #2a4a6b !important;
+    border-color: #2a4a6b !important;
+    color: white !important;
+}
+
+.desctenations {
+    border: 2px white solid;
+    padding: 30px;
+    margin: 30px;
+    background-color: rgba(126, 121, 121, 0.678);
+    border-radius: 2px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.locationdiv h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.row {
+    margin-bottom: 30px;
+
+    gap: 15px;
+    justify-content: center;
+}
+
+.card {
+    box-shadow: 3px 5px rgba(103, 101, 101, 0.678);
+    max-width: 400px;
+    height: 450px;
+    transition: transform 0.3s ease;
+    background-color: #a5b1b8;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img-top {
+    height: 150px;
+    padding: 10px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.card-body {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-text {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.btn-primary {
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+}
+
+/* Adjust the grid layout */
+.col-md-6 {
+    flex: 0 0 auto;
+    width: 48%;
+    max-width: 250px;
+}
+
+@media (max-width: 768px) {
+    .col-md-6 {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .desctenations {
+        padding: 15px;
+        margin: 10px;
+    }
+}
+
+.klcityflight {
+    background: linear-gradient(rgba(0, 0, 0, 0.564), rgba(0, 0, 0, 0.5)),
+        url('49.jpg') center/cover no-repeat;
+    height: 350px;
+    width: 100%;
+    margin: 30px 0;
+    padding-top: 80px;
+    /* Add this for top spacing */
+    border-radius: 5px;
+    display: flex;
+    /* Add these to center content vertically */
+    align-items: center;
+    /* Center content vertically */
+    justify-content: center;
+    /* Center content horizontally */
+}
+
+.klcityflight h2 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 2.5rem;
+}
+
+.klcityflight .lead {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Navigation Styles */
+.nav-container1 {
+    background-color: #617996;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+    margin: 0 50px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    overflow-x: auto; /* Allows horizontal scrolling if needed */
+    white-space: nowrap;
+}
+
+.nav-menu1 {
+    display: flex;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    gap: 0; /* Remove gap to use padding for spacing */
+    align-items: center;
+}
+
+.nav-item1 {
+    display: flex;
+    position: relative;
+    padding: 0 15px; /* Adjust padding as needed */
+}
+
+/* Vertical divider */
+.nav-item1:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 60%;
+    width: 1px;
+    background-color: #e0e0e0;
+}
+
+.nav-link1 {
+    color: #333333;
+    text-decoration: none;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 5px;
+    text-align: center;
+    min-width: 80px; /* Ensure consistent width */
+}
+
+.nav-link1 i {
+    font-size: 1.2rem;
+    margin-bottom: 5px; /* Space between icon and text */
+    display: block;
+}
+
+.nav-link1:hover {
+    color: #0a4784;
+}
+
+.nav-link1:hover i {
+    color: #0066cc;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+
+/* Remove last child margin */
+.nav-item1:last-child {
+    margin-right: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .nav-container1 {
+        justify-content: flex-start;
+    }
+    
+    .nav-item1 {
+        padding: 0 10px;
+    }
+    
+    .nav-link1 {
+        font-size: 0.85rem;
+        min-width: 70px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-container1 {
+        margin: 0 20px;
+    }
+    
+    .nav-item1::after {
+        display: none;
+    }
+    
+    .nav-link1 {
+        flex-direction: row;
+        gap: 5px;
+        min-width: auto;
+        padding: 8px;
+    }
+    
+    .nav-link1 i {
+        margin-bottom: 0;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-menu1 {
+        padding: 0 5px;
+    }
+    
+    .nav-item1 {
+        padding: 0 5px;
+    }
+    
+    .nav-link1 {
+        font-size: 0.75rem;
+        padding: 5px;
+    }
+}
+
+/* Add this to your existing CSS */
+.container2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 50px;
+
+    justify-content: center;
+}
+
+.box-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+/* Update the wide-box styles */
+.wide-box {
+    width: 500px;
+    min-height: 520px; /* Changed from height to min-height */
+    background-color: white;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+}
+
+/* Update the photonyc styles */
+.photonyc {
+    margin-top: 20px; /* Add space between text and image */
+    background: linear-gradient(rgba(0, 0, 0, 0.564), rgba(0, 0, 0, 0.5)),
+        url('D.U.M.B.O+and+a+classic+view+of+the+Manhattan+Bridge.jpg') center/cover no-repeat;
+    width: 100%; /* Full width of parent */
+    height: 300px; /* Fixed height for the image */
+    border-radius: 5px; /* Match the box's border radius */
+    flex-grow: 1; /* Allow it to take remaining space */
+}
+.ecophoto{
+    margin-top: 10px; /* Add space between text and image */
+    background: linear-gradient(rgba(0, 0, 0, 0.564), rgba(0, 0, 0, 0.5)),
+        url('grilled-salmon-economy-class-t1024x480.jpg.avif') center/cover no-repeat;
+    width: 100%; /* Full width of parent */
+    height: 110px; /* Fixed height for the image */
+    border-radius: 5px; /* Match the box's border radius */
+    flex-grow: 1;
+}
+
+.bisphoto{
+    margin-top: 10px; /* Add space between text and image */
+    background: linear-gradient(rgba(0, 0, 0, 0.564), rgba(0, 0, 0, 0.5)),
+        url('50469879186_71f7b20598_k.jpg') center/cover no-repeat;
+    width: 100%; /* Full width of parent */
+    height: 110px; /* Fixed height for the image */
+    border-radius: 5px; /* Match the box's border radius */
+    flex-grow: 1;
+}
+
+.firphoto{
+    margin-top: 10px; /* Add space between text and image */
+    background: linear-gradient(rgba(0, 0, 0, 0.564), rgba(0, 0, 0, 0.5)),
+        url('istockphoto-1141775104-612x612.jpg') center/cover no-repeat;
+    width: 100%; /* Full width of parent */
+    height: 110px; /* Fixed height for the image */
+    border-radius: 5px; /* Match the box's border radius */
+    flex-grow: 1;
+}
+
+.prephoto{
+    margin-top: 10px; /* Add space between text and image */
+    background: linear-gradient(rgba(0, 0, 0, 0.564), rgba(0, 0, 0, 0.5)),
+        url('img.jpg') center/cover no-repeat;
+    width: 100%; /* Full width of parent */
+    height: 110px; /* Fixed height for the image */
+    border-radius: 5px; /* Match the box's border radius */
+    flex-grow: 1;
+}
+
+.tall-box,.tall-box2,.tall-box3,.tall-box4 {
+    width: 250px;
+    height: 250px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.box-title {
+    color: #d71921;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.box-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.box-text {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .wide-box {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .tall-box {
+        width: 100%;
+        max-width: 290px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container2 {
+        padding: 0 20px;
+    }
+
+    .box-column {
+        width: 100%;
+    }
+}
+
+.flightclass {
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    background: linear-gradient(rgba(0, 0, 0, 0.564), rgba(0, 0, 0, 0.5)),
+        url('herobg-1.jpeg') center/cover no-repeat;
+    height: 100%;
+    margin-left: 40px;
+    margin-right: 40px;
+    border-radius: 5px;
+    border: 2px solid #d6d7d9a0;
+}
+
+.wide-box:hover,
+.tall-box:hover,
+.tall-box3:hover {
+    transform: translateY(-5px);
+}
+.tall-box2:hover,
+.tall-box4:hover{
+    transform: translateY(+5px);
+}
+
+.footer {
+    background-color: #0f1c2e;
+    color: #ffffff;
+    padding: 50px 0 20px;
+    font-family: Arial, sans-serif;
+}
+
+.footer h5 {
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.footer ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+.footer ul li a {
+    color: #a5b1b8;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer ul li a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.footer .divider {
+    border-top: 1px solid #3e5f81;
+    margin: 30px 0;
+}
+
+.subscribe-section {
+    margin-bottom: 30px;
+}
+
+.subscribe-section p {
+    color: #a5b1b8;
+    font-size: 14px;
+}
+
+.subscribe-input {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.subscribe-input input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+}
+
+.subscribe-input button {
+    background-color: #d71921;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.app-badges img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: #ffffff;
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+.privacy-link {
+    color: #a5b1b8;
+    font-size: 12px;
+    margin-top: 20px;
+    display: block;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+    .footer-column {
+        flex: 100%;
+    }
+}
+/* Vertical divider for footer columns */
+.divider-vertical {
+    border-left: 1px solid #3e5f81;
+    height: auto;
+    margin: 0 15px;
+}
+
+/* Horizontal divider (already exists in your CSS) */
+.divider {
+    border-top: 1px solid #3e5f81;
+    margin: 15px 0;
+    width: 100%;
+}
+
+/* Adjust footer columns layout */
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 30px;
+    padding: 0 15px;
+}
+
+@media (max-width: 768px) {
+    .divider-vertical {
+        display: none;
+    }
+    
+    .footer-column {
+        flex: 100%;
+        padding: 0;
+    }
+    
+    .divider {
+        margin: 10px 0;
+    }
+}
+@media (max-width: 767.98px) {
+    .footer .subscribe-section {
+        margin-bottom: 2rem; /* فاصله 32px در موبایل */
+    }
+}
