@@ -142,3 +142,25 @@ window.addEventListener('DOMContentLoaded', () => {
     setDefaultDates();
     getUserLocation();
 });
+// Add event listener to login button
+document.querySelector('.login-btn button').addEventListener('click', function(e) {
+    e.preventDefault();
+    var authModal = new bootstrap.Modal(document.getElementById('authModal'));
+    authModal.show();
+});
+
+// Form submission handlers
+document.querySelector('#login form')?.addEventListener('submit', function(e) {
+    e.preventDefault();
+    // Add your login logic here
+    console.log('Login form submitted');
+});
+
+document.querySelector('#signup form')?.addEventListener('submit', function(e) {
+    e.preventDefault();
+    // Add your signup logic here
+    console.log('Signup form submitted');
+    // You can switch to login tab after successful signup
+    // var signupTab = new bootstrap.Tab(document.querySelector('#login-tab'));
+    // signupTab.show();
+});
