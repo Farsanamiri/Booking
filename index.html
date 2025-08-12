@@ -11,7 +11,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="A5BC75F3-06A2-483A-9F14-2E88E5DDFC90.png" type="image/x-icon">
-    <link rel="icon" type="image/x-icon" href="A5BC75F3-06A2-483A-9F14-2E88E5DDFC90.png">
+    <style>
+
+    </style>
 </head>
 
 <body>
@@ -57,7 +59,7 @@
                     <a href="#" class="search-icon">
                         <img src="https://img.icons8.com/ios/50/ffffff/search.png" alt="Search" width="20">
                     </a>
-                    <a href="#" class="login-btn">
+                    <a href="#" class="login-btn" data-bs-toggle="modal" data-bs-target="#authModal">
                         <button class="btn btn-light btn-sm">Log in | Sign Up</button>
                     </a>
                 </div>
@@ -620,7 +622,7 @@
                         </div>
 
                         <!-- Add mt-4 class to this column for spacing -->
-                        <div class="col-md-6 mt-4 mt-md-0">
+                        <div class="col-md-6 mt-4 mt-md-0" style="margin-left: 50px;">
                             <h5>Emirates App</h5>
                             <p>Book and manage your flights on the go.</p>
 
@@ -648,6 +650,113 @@
                 </div>
             </div>
     </footer>
+
+    <!-- Login/Signup Modal -->
+    <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="authModalLabel">Welcome to Fly Better</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Tab Navigation -->
+                    <ul class="nav nav-tabs nav-justified mb-4" id="authTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login"
+                                type="button" role="tab">Login</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="signup-tab" data-bs-toggle="tab" data-bs-target="#signup"
+                                type="button" role="tab">Sign Up</button>
+                        </li>
+                    </ul>
+
+                    <!-- Tab Content -->
+                    <div class="tab-content" id="authTabsContent">
+                        <!-- Login Tab -->
+                        <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="loginEmail" class="form-label">Email address</label>
+                                    <input type="email" class="form-control" id="loginEmail"
+                                        placeholder="Enter your email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="loginPassword" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="loginPassword"
+                                        placeholder="Enter your password" required>
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="rememberMe">
+                                    <label class="form-check-label" for="rememberMe">Remember me</label>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100"
+                                    style="background-color: #3e5f81;">Login</button>
+                            </form>
+                            <div class="text-center mt-3">
+                                <a href="#" class="text-decoration-none">Forgot password?</a>
+                            </div>
+                            <div class="social-login mt-4">
+                                <p class="text-center mb-3">Or login with</p>
+                                <div class="d-flex justify-content-center gap-3">
+                                    <button class="btn btn-outline-primary rounded-circle">
+                                        <i class="fab fa-google"></i>
+                                    </button>
+                                    <button class="btn btn-outline-primary rounded-circle">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </button>
+                                    <button class="btn btn-outline-primary rounded-circle">
+                                        <i class="fab fa-twitter"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Signup Tab -->
+                        <div class="tab-pane fade" id="signup" role="tabpanel" aria-labelledby="signup-tab">
+                            <form>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="firstName" class="form-label">First Name</label>
+                                        <input type="text" class="form-control" id="firstName" placeholder="First name"
+                                            required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="lastName" class="form-label">Last Name</label>
+                                        <input type="text" class="form-control" id="lastName" placeholder="Last name"
+                                            required>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="signupEmail" class="form-label">Email address</label>
+                                    <input type="email" class="form-control" id="signupEmail"
+                                        placeholder="Enter your email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="signupPassword" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="signupPassword"
+                                        placeholder="Create a password" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="confirmPassword" class="form-label">Confirm Password</label>
+                                    <input type="password" class="form-control" id="confirmPassword"
+                                        placeholder="Confirm your password" required>
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="termsAgree" required>
+                                    <label class="form-check-label" for="termsAgree">I agree to the <a href="#"
+                                            class="text-decoration-none">Terms & Conditions</a></label>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100"
+                                    style="background-color: #3e5f81;">Create Account</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous">
